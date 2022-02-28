@@ -1,0 +1,205 @@
+.hero-section {
+  display: flex;
+  margin-bottom: 500px;
+ }
+ .hero-section__contacts {
+   position: absolute;
+   display: flex;
+   flex-direction: row;
+   transform: rotate(90deg);
+   align-items: flex-end;
+   transform-origin: 0% 100%;
+   
+ }
+ .hero-section__contacts-text {
+   white-space: nowrap;
+   font-size: 18px;
+   font-weight: 400;
+   margin-right: 24px;
+ }
+ .hero-section__contacts-link {
+   width: 24px;
+   margin-right: 24px;
+   transform: rotate(270deg);
+ }
+ .hero-section__contacts-link > svg path {
+   fill: #fff;
+ }
+ .hero-section__contacts-link > svg path.gradient {
+   opacity: 0;
+   transition: 0.7s ease;
+ }
+ 
+ .hero-section__contacts-link > svg path.instagram-gradient {
+   fill: url(#svg-insta-gradient);
+ }
+ 
+ .hero-section__contacts-link > svg path.twitter-gradient {
+   fill: url(#svg-twitter-gradient);
+ } 
+ 
+ .hero-section__contacts-link:hover > svg path.gradient {
+   opacity: 1;
+ }
+ .hero-section__main {
+   margin: 0 auto;
+ 
+ }
+ .hero-section__main-titel-line {
+   width: 60px;
+   height: 2px;
+   background: var(--acсent-color);
+ }
+ .hero-section__main-titel-grup {
+   display: flex;
+   flex-direction: row;
+   gap: 25px;
+   align-items: center;
+   margin-bottom: 25px;
+ }
+ .hero-section__main-titel{
+   font-weight: 600;
+   font-size: 18px;
+   letter-spacing: 4px;
+   text-transform: uppercase;
+   color: var(--acсent-color);
+   line-height: 1;
+   margin-bottom: 0;
+ }
+ .hero-section__main-text {
+   font-weight: 400;
+   font-size: 60px;
+   line-height: 80px;
+   text-transform: capitalize;
+   margin-bottom: 25px;
+ }
+ .hero-section__main-link {
+   display: flex;
+   flex-direction: row;
+   gap: 15px;
+   text-decoration: none;
+ }
+ .hero-section__main-link > span {
+   color: var(--primary-color);
+   font-weight: 400;
+   font-size: 18px;
+   transition: .2s ease;
+ }
+ .scrol-nav {
+   margin-left: auto;
+   display: flex;
+   justify-content: flex-end;
+ }
+ .hero-section__nav {
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: center;
+   top: 45%;
+   transform: translate(0,-50%);
+   z-index: 50000;
+ }
+ .hero-section__nav-element {
+   font-weight: 400;
+   font-size: 18px;
+   text-decoration: none;
+   color:  var(--primary-color);
+   padding: 12px 20px 12px 0;
+   border-right: 3px solid rgba(255, 255, 255, 0.5);
+   transition: 0.2s linear;
+ }
+ .hero-section__nav-element:hover {
+   font-weight: 500;
+   font-size: 19px;
+   color: var(--primary-color);
+   border-right: 3px solid var(--primary-color);
+ }
+ .hero-section__main-link > div {
+   animation-duration: .8s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+ }
+ .hero-section__main-link:hover > div {
+   animation-name: arrowSlide;
+ }
+ .hero-section__main-link:hover > span {
+   font-weight: 500;
+   font-size: 19px;
+ }
+ 
+ @keyframes arrowSlide {
+   0% {
+     transform: translate(0, 0);
+   }
+ 
+   100% {
+     transform: translate(0, 25%);
+   }
+ }
+ 
+ 
+ @media (max-width: 1040px) {
+   .hero-section {
+     margin-bottom: 300px;
+    }
+   .hero-section__main-titel-grup {
+     gap: 18px;
+     margin-bottom: 18px;
+   }
+   .hero-section__main-titel{
+     font-weight: 500;
+     font-size: 16px;
+     letter-spacing: 3px;
+   }
+   .hero-section__main-text {
+     font-size: 50px;
+     line-height: 70px;
+     margin-bottom: 18px;
+   }
+   .hero-section__nav {
+     top: 40%;
+   }
+   .hero-section__nav-element {
+     font-size: 16px;
+     padding: 10px 18px 10px 0;
+   }
+   .hero-section__nav-element:hover {
+     font-size: 17px;
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .hero-section {
+     margin-bottom: 120px;
+     background-color: rgba(11, 29, 38, 0.6);
+     padding: 20px 10px;
+     height: 350px;
+     align-items: center;
+   }
+   .hero-section__contacts {
+     display: none;
+   }
+   .scrol-nav {
+     display: none;
+   }
+   .hero-section__main-titel-line {
+     width: 30px;
+     height: 1px;
+   }
+   .hero-section__main-titel-grup {
+     gap: 15px;
+     margin-bottom: 25px;
+   }
+   .hero-section__main-titel{
+     font-weight: 500;
+     font-size: 14px;
+     letter-spacing: 2px;
+   }
+   .hero-section__main-text {
+     font-weight: 600;
+     font-size: 30px;
+     line-height: 40px;
+     margin-bottom: 25px;
+   }
+ }
